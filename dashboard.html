@@ -50,10 +50,10 @@
             
             <!-- Action Buttons inside Card -->
             <div class="grid grid-cols-2 gap-3 pt-3 border-t border-blue-400/40">
-                <button onclick="openAddMoneyModal()" class="emerald-white-bg text-blue-700 py-2 rounded-xl text-xs font-bold shadow hover:bg-blue-50 transition flex items-center justify-center space-x-1.5">
+                <a href="addmoney.html" class="emerald-white-bg text-blue-700 py-2 rounded-xl text-xs font-bold shadow hover:bg-blue-50 transition flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-plus-circle"></i>
                     <span>Add Money</span>
-                </button>
+                </a>
                 <a href="transfer.html" class="bg-blue-900 text-white py-2 rounded-xl text-xs font-bold shadow hover:bg-blue-950 transition flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     <span>Transfer</span>
@@ -69,24 +69,24 @@
                 </div>
                 <span class="text-xs font-medium text-slate-600">Transfer</span>
             </a>
-            <button onclick="openServiceModal('Airtime & Data')" class="flex flex-col items-center group focus:outline-none">
+            <a href="airtime.html" class="flex flex-col items-center group focus:outline-none">
                 <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-[#0077ff] group-hover:text-white transition shadow-sm">
                     <i class="fa-solid fa-mobile-screen"></i>
                 </div>
                 <span class="text-xs font-medium text-slate-600">Airtime</span>
-            </button>
-            <button onclick="openServiceModal('Betting Funding')" class="flex flex-col items-center group focus:outline-none">
+            </a>
+            <a href="betting.html" class="flex flex-col items-center group focus:outline-none">
                 <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-[#0077ff] group-hover:text-white transition shadow-sm">
                     <i class="fa-solid fa-futbol"></i>
                 </div>
                 <span class="text-xs font-medium text-slate-600">Betting</span>
-            </button>
-            <button onclick="openServiceModal('Utility Bills')" class="flex flex-col items-center group focus:outline-none">
+            </a>
+            <a href="bills.html" class="flex flex-col items-center group focus:outline-none">
                 <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-[#0077ff] group-hover:text-white transition shadow-sm">
                     <i class="fa-solid fa-lightbulb"></i>
                 </div>
                 <span class="text-xs font-medium text-slate-600">Bills</span>
-            </button>
+            </a>
         </div>
 
         <!-- Transaction History Button Card -->
@@ -140,14 +140,6 @@
                 eyeIcon.className = "fa-solid fa-eye mr-1";
                 hideText.innerText = "Hide";
             }
-        }
-
-        function openAddMoneyModal() {
-            alert("To fund your Armpay account, transfer any amount to your dedicated account number: 7000000000 (Armpay MFB).");
-        }
-
-        function openServiceModal(serviceName) {
-            alert("Please fund your account to use " + serviceName);
         }
     </script>
 
