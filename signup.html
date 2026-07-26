@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Armpay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .opay-green { background-color: #12b86b; }
+        .opay-dark-green { background-color: #0d9655; }
+        .opay-light-bg { background-color: #f4f5f7; }
+    </style>
+</head>
+<body class="opay-light-bg text-slate-800 font-sans min-h-screen flex flex-col justify-between py-6 px-4">
+
+    <!-- Top Header -->
+    <div class="max-w-md mx-auto w-full flex items-center justify-between mb-4">
+        <a href="index.html" class="text-slate-600 hover:text-slate-900 flex items-center text-sm font-medium">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Home
+        </a>
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 opay-green text-white rounded-full flex items-center justify-center font-bold text-sm">A</div>
+            <span class="font-bold text-slate-800">Armpay</span>
+        </div>
+    </div>
+
+    <!-- Main Registration Box -->
+    <main class="max-w-md mx-auto w-full bg-white p-6 rounded-2xl shadow-sm space-y-6">
+        <div>
+            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Fast & Secure</span>
+            <h1 class="text-2xl font-black text-slate-900 mt-2">Open an Armpay Account</h1>
+            <p class="text-xs text-slate-500 mt-1">Enter your mobile number to get started with zero maintenance fees.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Account registration simulated successfully! Redirecting...'); window.location.href='index.html';" class="space-y-4">
+            <div>
+                <label class="block text-xs font-semibold text-slate-600 mb-1">Phone Number</label>
+                <div class="flex">
+                    <span class="bg-slate-100 border border-r-0 border-slate-200 text-slate-600 px-3 py-2.5 rounded-l-xl text-sm font-medium flex items-center">+234</span>
+                    <input type="tel" maxlength="10" placeholder="8030000000" required class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-r-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-slate-600 mb-1">Full Name (As on BVN / NIN)</label>
+                <input type="text" placeholder="e.g. Ibrahim Musa" required class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-slate-600 mb-1">Create 4-Digit Transaction PIN</label>
+                <input type="password" maxlength="4" placeholder="••••" required class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none tracking-widest text-center text-lg">
+            </div>
+
+            <div class="flex items-start space-x-2 pt-1">
+                <input type="checkbox" required class="mt-0.5 rounded text-emerald-600 focus:ring-emerald-500">
+                <p class="text-[11px] text-slate-500 leading-tight">
+                    I agree to Armpay's <a href="#" class="text-emerald-600 font-semibold underline">Terms of Service</a> and <a href="#" class="text-emerald-600 font-semibold underline">Privacy Policy</a>.
+                </p>
+            </div>
+
+            <button type="submit" class="w-full opay-green text-white py-3.5 rounded-xl font-bold text-sm shadow-md hover:opay-dark-green transition mt-2">
+                Register Account
+            </button>
+        </form>
+
+        <div class="text-center pt-2 border-t border-slate-100">
+            <p class="text-xs text-slate-500">Already have an account? <a href="index.html" class="text-emerald-600 font-bold hover:underline">Sign In</a></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-md mx-auto w-full text-center mt-6">
+        <p class="text-[10px] text-slate-400">Licensed by CBN & Insured by NDIC 🇳🇬</p>
+    </footer>
+
+</body>
+</html>
