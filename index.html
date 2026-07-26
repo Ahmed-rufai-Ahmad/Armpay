@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armpay - Beyond Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .opay-green { background-color: #12b86b; }
+        .opay-dark-green { background-color: #0d9655; }
+        .opay-light-bg { background-color: #f4f5f7; }
+    </style>
+</head>
+<body class="opay-light-bg text-slate-800 font-sans pb-12">
+
+    <!-- Top App Header -->
+    <header class="opay-green text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-md mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white text-emerald-600 rounded-full flex items-center justify-center font-black text-xl shadow">
+                    A
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight">Armpay</h1>
+                    <p class="text-xs text-emerald-100">We are beyond banking 🇳🇬</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="#support" class="w-9 h-9 bg-emerald-700/40 rounded-full flex items-center justify-center text-white hover:bg-emerald-700 transition">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+                <a href="#profile" class="w-9 h-9 bg-emerald-700/40 rounded-full flex items-center justify-center text-white hover:bg-emerald-700 transition">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Mobile Container View -->
+    <main class="max-w-md mx-auto p-4 space-y-4">
+
+        <!-- Wallet / Balance Card -->
+        <div class="opay-green text-white p-6 rounded-2xl shadow-lg relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full pointer-events-none"></div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-xs text-emerald-100 uppercase tracking-wider font-medium">Available Balance</span>
+                <button onclick="alert('Balance hidden/shown')" class="text-xs bg-emerald-700/50 px-2 py-1 rounded-md text-emerald-100 hover:bg-emerald-700 transition">
+                    <i class="fa-solid fa-eye mr-1"></i> Hide
+                </button>
+            </div>
+            <div class="flex items-baseline space-x-2 mb-6">
+                <span class="text-3xl md:text-4xl font-extrabold tracking-tight">₦ 148,550.00</span>
+            </div>
+            <div class="flex justify-between items-center pt-3 border-t border-emerald-500/40 text-xs">
+                <div class="flex items-center space-x-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-200"></i>
+                    <span>Protected by NDIC & CBN</span>
+                </div>
+                <a href="#history" class="underline text-emerald-100 hover:text-white">Transaction History</a>
+            </div>
+        </div>
+
+        <!-- Quick Action Grid (OPay Style) -->
+        <div class="bg-white p-4 rounded-2xl shadow-sm grid grid-cols-4 gap-4 text-center">
+            <a href="#transfer" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <span class="text-xs font-medium text-slate-700">Transfer</span>
+            </a>
+            <a href="#airtime" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <span class="text-xs font-medium text-slate-700">Airtime/Data</span>
+            </a>
+            <a href="#betting" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
+                    <i class="fa-solid fa-futbol"></i>
+                </div>
+                <span class="text-xs font-medium text-slate-700">Betting</span>
+            </a>
+            <a href="#bills" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <span class="text-xs font-medium text-slate-700">Bills</span>
+            </a>
+        </div>
+
+        <!-- Promo Banner -->
+        <div class="bg-gradient-to-r from-amber-500 to-orange-500 text-white p-4 rounded-2xl shadow-sm flex justify-between items-center">
+            <div>
+                <span class="bg-white/20 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Cashback Bonus</span>
+                <h4 class="font-bold text-sm mt-1">Get ₦500 on your first transfer!</h4>
+                <p class="text-xs text-amber-100">Send money to any bank today.</p>
+            </div>
+            <button class="bg-white text-orange-600 text-xs font-bold px-4 py-2 rounded-xl shadow hover:bg-amber-50 transition">
+                Claim
+            </button>
+        </div>
+
+        <!-- Quick Transfer Component -->
+        <div id="transfer" class="bg-white p-5 rounded-2xl shadow-sm space-y-4">
+            <h3 class="font-bold text-slate-900 text-base">Make a Quick Transfer</h3>
+            
+            <form onsubmit="event.preventDefault(); alert('Transfer initiated successfully!');" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 mb-1">Bank Name</label>
+                    <select class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <option>Armpay User (Instant & Free)</option>
+                        <option>Access Bank</option>
+                        <option>First Bank of Nigeria</option>
+                        <option>Guaranty Trust Bank (GTB)</option>
+                        <option>United Bank for Africa (UBA)</option>
+                        <option>Opay / Paycom</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 mb-1">Account Number</label>
+                    <input type="text" maxlength="10" placeholder="Enter 10-digit account number" required class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 mb-1">Amount (₦)</label>
+                    <input type="number" placeholder="0.00" required class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full opay-green text-white py-3 rounded-xl font-bold text-sm shadow-md hover:opay-dark-green transition">
+                    Send Money Securely
+                </button>
+            </form>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm space-y-3">
+            <div class="flex justify-between items-center">
+                <h3 class="font-bold text-slate-900 text-base">Recent Transactions</h3>
+                <span class="text-xs text-emerald-600 font-semibold cursor-pointer">See All</span>
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between items-center py-2 border-b border-slate-100">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-bold text-slate-800">Transfer Received</h5>
+                            <p class="text-[11px] text-slate-400">From Ibrahim Musa</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-emerald-600">+₦15,000</span>
+                        <p class="text-[10px] text-slate-400">Today, 2:14 PM</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-bold text-slate-800">Airtime Purchase</h5>
+                            <p class="text-[11px] text-slate-400">MTN Nigeria - 0803...</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-slate-800">-₦1,000</span>
+                        <p class="text-[10px] text-slate-400">Yesterday</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation Bar (Mobile Application Style) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 py-2 px-6 z-50 max-w-md mx-auto shadow-lg rounded-t-2xl">
+        <div class="flex justify-between items-center text-center">
+            <a href="#" class="flex flex-col items-center text-emerald-600">
+                <i class="fa-solid fa-house text-lg"></i>
+                <span class="text-[10px] font-bold mt-1">Home</span>
+            </a>
+            <a href="#rewards" class="flex flex-col items-center text-slate-400 hover:text-emerald-600 transition">
+                <i class="fa-solid fa-gift text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">Rewards</span>
+            </a>
+            <a href="#finance" class="flex flex-col items-center text-slate-400 hover:text-emerald-600 transition">
+                <i class="fa-solid fa-chart-pie text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">Finance</span>
+            </a>
+            <a href="#profile" class="flex flex-col items-center text-slate-400 hover:text-emerald-600 transition">
+                <i class="fa-solid fa-user-gear text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">Me</span>
+            </a>
+        </div>
+    </nav>
+
+</body>
+</html>
