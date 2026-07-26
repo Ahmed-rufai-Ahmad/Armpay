@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armpay - Beyond Banking</title>
+    <title>Armpay - Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="flex items-center space-x-3">
-                <a href="signup.html" class="bg-white/20 px-3 py-1.5 rounded-full text-xs font-bold text-white hover:bg-white/30 transition">
+                <a href="index.html" class="bg-white/20 px-3 py-1.5 rounded-full text-xs font-bold text-white hover:bg-white/30 transition">
                     Logout
                 </a>
             </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <!-- Quick Action Grid (OPay Style) -->
+        <!-- Quick Action Grid -->
         <div class="bg-white p-4 rounded-2xl shadow-sm grid grid-cols-4 gap-4 text-center">
             <button onclick="scrollToSection('transfer')" class="flex flex-col items-center group focus:outline-none">
                 <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl mb-1.5 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
@@ -137,14 +137,14 @@
                 <i class="fa-solid fa-house text-lg"></i>
                 <span class="text-[10px] font-bold mt-1">Home</span>
             </button>
-            <a href="signup.html" class="flex flex-col items-center text-slate-400 hover:text-emerald-600 transition focus:outline-none">
+            <a href="index.html" class="flex flex-col items-center text-slate-400 hover:text-emerald-600 transition focus:outline-none">
                 <i class="fa-solid fa-user-gear text-lg"></i>
                 <span class="text-[10px] font-medium mt-1">Account</span>
             </a>
         </div>
     </nav>
 
-    <!-- Interactive JavaScript Logic -->
+    <!-- Interactive Logic Script -->
     <script>
         let isBalanceHidden = false;
         const actualBalance = "₦ 0.00";
